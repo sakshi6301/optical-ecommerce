@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-['Inter'] antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Poppins'];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-orange-600 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-50;
+  }
+}
